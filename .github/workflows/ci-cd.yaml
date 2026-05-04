@@ -18,9 +18,11 @@ jobs:
           node-version: 18
 
       - name: Install dependencies
+        working-directory: simple-api
         run: npm install
 
       - name: Run tests
+        working-directory: simple-api
         run: node tests/test.js
 
       # 🔥 FIX: Enable Docker
